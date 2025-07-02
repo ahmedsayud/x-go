@@ -1,5 +1,3 @@
-import React from 'react'
-
 const BookingSteps: React.FC<{ step: number }> = ({ step }) => {
   const steps = ['Details', 'Payment', 'Confirmation']
   return (

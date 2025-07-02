@@ -1,5 +1,3 @@
-import React from "react";
-
 import car1 from "../assets/images (4).jfif";
 import car2 from "../assets/images (5).jfif";
 import car3 from "../assets/images (6).jfif";
@@ -118,8 +116,8 @@ const steps = [
 ];
 
 const HowItWorks: React.FC = () => (
-  <section className="flex flex-wrap justify-center items-start gap-10 max-w-6xl mx-auto p-8 mb-12">
-    <div className="max-w-md w-full">
+<section className="grid lg:grid-cols-2 sm:grid-cols-1 gap-10 sm:gap-y-12 max-w-6xl mx-auto p-8 mt-12 mb-12">
+    <div className="max-w-md mt-10 w-full min-w-[280px] flex-1">
       <h4 className="text-orange-500 font-bold text-base mb-2">How It Works</h4>
       <h2 className="font-bold text-2xl md:text-4xl mb-8">Step by step to rent a car on our platform</h2>
       <ol className="space-y-6">
@@ -144,36 +142,36 @@ const HowItWorks: React.FC = () => (
         ))}
       </ol>
     </div>
-    <div className="max-w-lg w-full">
+    <div className="max-w-lg mt-10 w-full min-w-[280px] flex-1">
       <div className="mb-8">
         <h4 className="font-medium text-xl md:text-2xl mb-4">Car Type</h4>
-        <div className="flex flex-row gap-4 w-full overflow-x-auto hide-scrollbar">
+        <div className="flex flex-row gap-4 w-full overflow-x-auto hide-scrollbar pb-2">
           {cars.map((car) => (
             <div
               key={car.id}
-              className="flex-shrink-0 w-48 md:w-56 bg-white rounded-lg shadow-md p-3 mr-2 last:mr-0"
+              className="flex-shrink-0 w-40 md:w-48 bg-white rounded-lg shadow-md p-3 mr-2 last:mr-0"
             >
               <img
                 src={car.image}
                 alt={car.name}
-                className="object-cover rounded-lg mb-2 w-full h-28 md:h-32"
+                className="object-cover rounded-lg mb-2 w-full h-24 md:h-32"
               />
               <h5 className="font-normal text-base md:text-lg text-center">{car.name}</h5>
             </div>
           ))}
         </div>
       </div>
-      <div className="flex flex-row gap-5 w-full overflow-x-auto hide-scrollbar">
+      <div className="flex flex-row gap-5 w-full overflow-x-auto hide-scrollbar pb-2">
         {cars.map((car) => (
           <div
             key={car.id}
-            className="flex flex-col gap-y-4 flex-shrink-0 w-64 md:w-72 h-[400px] rounded-lg shadow-md bg-white"
+            className="flex flex-col gap-y-4 flex-shrink-0 w-56 md:w-64 h-[370px] md:h-[400px] rounded-lg shadow-md bg-white"
           >
             <h1 className="font-semibold text-lg md:text-2xl p-4">200+ Car Available</h1>
             <img
               src={car.image}
               alt={car.name}
-              className="object-cover rounded-lg mb-2 w-full h-40 md:h-48"
+              className="object-cover rounded-lg mb-2 w-full h-32 md:h-48"
             />
             <div className="p-4">
               <p className="font-medium text-base md:text-lg">{car.name}</p>

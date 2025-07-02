@@ -81,7 +81,7 @@ const Landing: React.FC = () => {
         </h1>
       </section>
       <section
-        className="relative w-full max-w-6xl mx-auto bg-white rounded-2xl pb-10  py-10 mb-12 flex flex-col items-center"
+        className="relative w-full max-w-6xl mx-auto bg-white rounded-2xl pb-10 py-10 mb-12 flex flex-col items-center px-4 md:px-8"
         style={{ zIndex: 2 }}
       >
         <h2 className="text-xl md:text-2xl font-bold text-orange-500 text-center mb-1">
@@ -90,6 +90,8 @@ const Landing: React.FC = () => {
         <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-6">
           Explore Our Collection Cars
         </h3>
+
+        {/* أزرار الفلترة */}
         <div className="flex flex-wrap gap-3 justify-center mb-8">
           <button className="bg-orange-100 text-orange-500 font-semibold rounded-full px-5 py-1 text-sm">
             All Type
@@ -104,29 +106,33 @@ const Landing: React.FC = () => {
             Lamborghini
           </button>
         </div>
-        {/* بيانات السيارات */}
-        <div className="  mx-auto grid grid-cols-3  place-items-center gap-8">
-          {" "}
+
+        {/* شبكة السيارات */}
+        <div className="w-full grid sm:w-[80%] sm:grid-cols-1 lg:grid-cols-3 gap-8">
           {cars.map((car, i) => (
-            <div key={i} className="w-[360px]">
+            <div key={i} className="w-full  max-w-[360px]  mx-auto">
               <CarCard {...car} />
             </div>
           ))}
         </div>
-        <button className="mt-10 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full px-8 py-2 transition">
+
+        {/* زر عرض المزيد */}
+        <button className="mt-10 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full px-8 py-2 transition w-full max-w-xs mx-auto">
           See All Collection
         </button>
       </section>
+
       {/* WHY CHOOSE US SECTION */}
-      <section className="w-full max-w-6xl mx-auto pt-10 mb-16 flex flex-col items-center">
-        <h4 className="text-orange-500  text-lg mb-2 mt-2 tracking-wide">
+      <section className="w-full max-w-6xl mx-auto pt-10 mb-16 flex flex-col items-center px-4 md:px-8">
+        <h4 className="text-orange-500 text-lg mb-2 mt-2 tracking-wide">
           WHY CHOOSE US
         </h4>
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 w-[500]">
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 w-full  max-w-xl">
           Unmatched Quality & Service
           <br /> For Your Needs
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 ">
+
+        <div className="grid   sm:grid-cols-1 lg:grid-cols-2 gap-6 m-auto  md:gap-8 ">
           <WhyChooseCard
             image={icon1}
             title="Flexible Dates"
@@ -149,21 +155,20 @@ const Landing: React.FC = () => {
           />
         </div>
       </section>
+
       <HowItWorks />
       {/* Download App Section */}
-      <section className="w-fill flex-col  flex items-center justify-center mt-10">
-        <div
-          className="w-[80%]  bg-gradient-to-t from-[#e69220] via-[#f7c26c] to-[#fff8ff]  py-12 text-center rounded-lg	  "
-        >
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center ">
+      <section className="w-full flex flex-col items-center justify-center mt-10 px-2">
+        <div className="w-[80%]  bg-gradient-to-t from-[#e69220] via-[#f7c26c] to-[#fff8ff] py-8 md:py-12 text-center rounded-lg">
+          <h2 className="text-xl md:text-3xl font-bold mb-4 md:mb-6 text-center ">
             Download Our App
           </h2>
-          <p className=" mb-8 text-center max-w-md mx-auto">
+          <p className="mb-6 md:mb-8 text-center max-w-md mx-auto text-sm md:text-base">
             Get the best car rental experience on your mobile. Download our app
             now from the App Store or Google Play!
           </p>
-          <div className="flex flex-row gap-4 justify-center items-center">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 w-[280px] m-auto justify-items-center	 items-center">
+            <a href="#" target="_blank" rel="noopener noreferrer ">
               <img
                 src={appStoreImg}
                 alt="Download on the App Store"

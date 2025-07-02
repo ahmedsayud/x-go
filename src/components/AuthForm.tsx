@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface AuthFormProps {
   title: string
   children?: React.ReactNode
