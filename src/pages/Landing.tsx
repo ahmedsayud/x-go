@@ -81,7 +81,7 @@ const Landing: React.FC = () => {
         </h1>
       </section>
       <section
-        className="relative w-full max-w-6xl mx-auto bg-white rounded-2xl pb-10 py-10 mb-12 flex flex-col items-center px-4 md:px-8"
+        className="relative w-full max-w-none sm:max-w-6xl mx-auto bg-white rounded-2xl pb-10 py-10 mb-12 flex flex-col items-center px-4 md:px-8"
         style={{ zIndex: 2 }}
       >
         <h2 className="text-xl md:text-2xl font-bold text-orange-500 text-center mb-1">
@@ -110,7 +110,7 @@ const Landing: React.FC = () => {
         {/* شبكة السيارات */}
         <div className="w-full grid sm:w-[80%] sm:grid-cols-1 lg:grid-cols-3 gap-8">
           {cars.map((car, i) => (
-            <div key={i} className="w-full  max-w-[360px]  mx-auto">
+            <div key={i} className="w-full max-w-[95vw] md:max-w-[420px] mx-auto">
               <CarCard {...car} />
             </div>
           ))}
@@ -123,7 +123,7 @@ const Landing: React.FC = () => {
       </section>
 
       {/* WHY CHOOSE US SECTION */}
-      <section className="w-full max-w-6xl mx-auto pt-10 mb-16 flex flex-col items-center px-4 md:px-8">
+      <section className="w-full max-w-none sm:max-w-6xl mx-auto pt-10 mb-16 flex flex-col items-center px-4 md:px-8">
         <h4 className="text-orange-500 text-lg mb-2 mt-2 tracking-wide">
           WHY CHOOSE US
         </h4>
@@ -133,26 +133,26 @@ const Landing: React.FC = () => {
         </h2>
 
         <div className="grid   sm:grid-cols-1 lg:grid-cols-2 gap-6 m-auto  md:gap-8 ">
-          <WhyChooseCard
+          <div className="w-full max-w-none sm:max-w-[420px] mx-auto"><WhyChooseCard
             image={icon1}
             title="Flexible Dates"
             description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
-          />
-          <WhyChooseCard
+          /></div>
+          <div className="w-full max-w-none sm:max-w-[420px] mx-auto"><WhyChooseCard
             image={icon2}
             title="Plan Your Trip"
             description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
-          />
-          <WhyChooseCard
+          /></div>
+          <div className="w-full max-w-none sm:max-w-[420px] mx-auto"><WhyChooseCard
             image={icon3}
             title="Flexible Dates"
             description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
-          />
-          <WhyChooseCard
+          /></div>
+          <div className="w-full max-w-none sm:max-w-[420px] mx-auto"><WhyChooseCard
             image={icon4}
             title="Plan Your Trip"
             description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
-          />
+          /></div>
         </div>
       </section>
 

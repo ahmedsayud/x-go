@@ -7,7 +7,7 @@ interface CarCardProps {
 }
 
 const CarCard: React.FC<CarCardProps> = ({ name, image, price, location, rating }) => (
-  <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col w-full mx-auto h-[368px]">
+  <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col w-full mx-auto">
     <img
       src={image}
       alt={name}

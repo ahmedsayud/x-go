@@ -6,7 +6,7 @@ interface WhyChooseCardProps {
 }
 
 const WhyChooseCard: React.FC<WhyChooseCardProps> = ({ icon, image, title, description }) => (
-  <div className="bg-gray-50 m-auto rounded-xl shadow p-8 flex flex-col items-center text-center w-[552px]">
+  <div className="bg-gray-50 rounded-xl shadow p-8 flex flex-col items-center text-center w-full">
     <span className=" text-orange-500 rounded-full p-4 mb-4 flex items-center justify-center">
       {image ? (
         <img src={image} alt={title + ' icon'} className="w-10 h-10 object-contain" />

@@ -9,7 +9,7 @@ const Footer: React.FC = () => (
         <p className="text-gray-700 sm:w-[330%]">Stay Connected with us to get new update information</p>
       </div>
       {/* الأعمدة */}
-      <div className="flex-1 grid lg:grid-cols-4 m-auto text-center sm:grid-cols-1 gap-6 w-full">
+      <div className="flex-1 grid lg:grid-cols-4 m-auto text-center sm:grid-cols-2 gap-6 w-full">
         <div>
           <h5 className="font-bold mb-2">Product</h5>
           <ul className="space-y-1">
