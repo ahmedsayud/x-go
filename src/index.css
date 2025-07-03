@@ -11,3 +11,14 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome/Safari/Webkit */
 }
+
+@media (min-width: 768px) {
+  .header-content-scroll {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .header-content-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+}

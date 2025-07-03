@@ -118,10 +118,12 @@ const steps = [
 ];
 
 const HowItWorks: React.FC = () => (
-  <section className="flex flex-col md:flex-row flex-wrap justify-center items-start gap-10 max-w-6xl mx-auto p-8 mt-12 mb-12">
-    <div className="max-w-md w-full min-w-[280px] flex-1">
+  <section className="grid w-[90%] lg:grid-cols-2 sm:grid-cols-1  max-w-screen-xl gap-10  m-auto p-8 mt-12 mb-12">
+    <div className="max-w-lg sm:block  flex-1  m-auto">
       <h4 className="text-orange-500 font-bold text-base mb-2">How It Works</h4>
-      <h2 className="font-bold text-2xl md:text-4xl mb-8">Step by step to rent a car on our platform</h2>
+      <h2 className="font-bold text-2xl md:text-4xl mb-8">
+        Step by step to rent a car on our platform
+      </h2>
       <ol className="space-y-6">
         {steps.map((step, idx) => (
           <li key={step.number} className="flex items-start">
@@ -135,41 +137,50 @@ const HowItWorks: React.FC = () => (
               {step.number}
             </span>
             <div>
-              <h3 className="font-semibold text-lg md:text-2xl mb-1">{step.title}</h3>
+              <h3 className="font-semibold text-lg md:text-2xl mb-1">
+                {step.title}
+              </h3>
               {step.description && (
-                <p className="font-medium text-base md:text-lg max-w-xs">{step.description}</p>
+                <p className="font-medium text-base md:text-lg max-w-xs">
+                  {step.description}
+                </p>
               )}
             </div>
           </li>
         ))}
       </ol>
     </div>
-    <div className="max-w-lg w-full min-w-[280px] flex-1">
-      <div className="mb-8">
+    <div className=" max-w-xl sm:w-[100%] w-full flex-1 m-auto">
+      <div className="mb-8 mt-10 sm:w-[100%] ">
         <h4 className="font-medium text-xl md:text-2xl mb-4">Car Type</h4>
-        <div className="flex flex-col md:flex-row gap-4 w-full md:overflow-x-auto hide-scrollbar pb-2">
+
+        <div className="flex  gap-4 overflow-x-auto whitespace-nowrap hide-scrollbar pb-2 hide-scrollbar pb-2">
           {cars.map((car) => (
             <div
               key={car.id}
-              className="w-full md:w-48 bg-white rounded-lg shadow-md p-3 mb-4 md:mb-0 mr-0 md:mr-2 last:mr-0"
+              className="flex-shrink-0 w-50  bg-white rounded-lg shadow-md p-3 last:mr-0 px-2"
             >
               <img
                 src={car.image}
                 alt={car.name}
-                className="object-cover rounded-lg mb-2 w-full h-48 md:h-32"
+                className="object-cover rounded-lg mb-2 w-full h-52 md:h-32"
               />
-              <h5 className="font-normal text-base md:text-lg text-center">{car.name}</h5>
+              <h5 className="font-normal text-base md:text-lg text-center">
+                {car.name}
+              </h5>
             </div>
           ))}
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-5 w-full md:overflow-x-auto hide-scrollbar pb-2">
+      <div className="flex gap-4 overflow-x-auto whitespace-nowrap hide-scrollbar pb-2 hide-scrollbar pb-2">
         {cars.map((car) => (
           <div
             key={car.id}
             className="flex flex-col gap-y-4 w-full md:w-64 h-[420px] md:h-[400px] rounded-lg shadow-md bg-white mb-6 md:mb-0"
           >
-            <h1 className="font-semibold text-lg md:text-2xl p-4">200+ Car Available</h1>
+            <h1 className="font-semibold text-lg md:text-2xl p-4">
+              200+ Car Available
+            </h1>
             <img
               src={car.image}
               alt={car.name}
@@ -201,7 +212,9 @@ const HowItWorks: React.FC = () => (
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <p className="font-normal text-base md:text-lg">{car.location}</p>
+                  <p className="font-normal text-base md:text-lg">
+                    {car.location}
+                  </p>
                 </div>
                 <p className="flex items-center gap-1">
                   {car.rating}

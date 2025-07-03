@@ -17,6 +17,8 @@ import icon4 from "../assets/Icon/bx_support.png";
 import HowItWorks from "../components/HowItWorks";
 import appStoreImg from "../assets/Frame 179.png";
 import playStoreImg from "../assets/Frame 180.png";
+// import AutoCarousel from "../components/AutoCarousel";
+
 
 const cars = [
   {
@@ -66,6 +68,8 @@ const Landing: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white pt-20">
       <Header />
+      {/* <AutoCarousel /> */}
+
       <section
         className="w-full h-[590px] flex items-end bg-cover bg-center justify-center rounded-b-2xl shadow-lg overflow-hidden mb-8"
         style={{ backgroundImage: `url(${carHero})` }}

@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-white p-5  shadow-sm flex items-center justify-center z-50">
       {/* Logo */}
-      <div className="flex items-center justify-between w-[80%]">
+      <div className="flex items-center justify-between w-[80%] header-content-scroll">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="w-20" />
         </div>
