@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import carHero from "../assets/d715a1cb2f850c1a49ea75f003edab7156d9fc1c.jpg";
+// import carHero from "../assets/d715a1cb2f850c1a49ea75f003edab7156d9fc1c.jpg";
 import carCollection from "../assets/images (9).jfif";
 import carCollection1 from "../assets/download.jfif";
 import carCollection2 from "../assets/images (5).jfif";
@@ -17,7 +17,8 @@ import icon4 from "../assets/Icon/bx_support.png";
 import HowItWorks from "../components/HowItWorks";
 import appStoreImg from "../assets/Frame 179.png";
 import playStoreImg from "../assets/Frame 180.png";
-// import AutoCarousel from "../components/AutoCarousel";
+import { Link } from "react-router-dom";
+import AutoCarousel from "../components/AutoCarousel";
 
 
 const cars = [
@@ -66,29 +67,24 @@ const cars = [
 ];
 const Landing: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-white pt-20">
+  <div className="min-h-screen flex flex-col bg-gray-50 pt-10 ">
       <Header />
-      {/* <AutoCarousel /> */}
+      <AutoCarousel />
 
-      <section
-        className="w-full h-[590px] flex items-end bg-cover bg-center justify-center rounded-b-2xl shadow-lg overflow-hidden mb-8"
+      {/* <section
+        className="w-full h-[590px] flex items-end bg-cover bg-center justify-center rounded-b-2xl shadow-lg overflow-hidden mb-8 mt-10"
         style={{ backgroundImage: `url(${carHero})` }}
       >
-        {/* <img
-          src={carHero}
-          alt="Car Hero"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        /> */}
-        <div className="inset-0 bg-black bg-opacity-40" />
+     
         <h1 className="relative z-20 mb-10 text-3xl md:text-5xl font-bold text-white text-center drop-shadow-lg">
           Own the Thrill – Rent the Drive
         </h1>
-      </section>
+      </section> */}
       <section
-        className="relative w-full max-w-none sm:max-w-6xl mx-auto bg-white rounded-2xl pb-10 py-10 mb-12 flex flex-col items-center px-4 md:px-8"
+        className="relative w-full max-w-none sm:max-w-6xl mx-auto bg-white rounded-2xl pb-10 py-10 mt-10 mb-12 flex flex-col items-center px-4 md:px-8"
         style={{ zIndex: 2 }}
       >
-        <h2 className="text-xl md:text-2xl font-bold text-orange-500 text-center mb-1">
+        <h2 className="text-xl md:text-2xl font-bold text-orange-500 text-center  mt-10 mb-1">
           Collection
         </h2>
         <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-6">
@@ -121,9 +117,11 @@ const Landing: React.FC = () => {
         </div>
 
         {/* زر عرض المزيد */}
-        <button className="mt-10 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full px-8 py-2 transition w-full max-w-xs mx-auto">
-          See All Collection
-        </button>
+        <Link to="/collection">
+          <button className="mt-10 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full px-8 py-2 transition w-full max-w-xs mx-auto">
+            See All Collection
+          </button>
+        </Link>
       </section>
 
       {/* WHY CHOOSE US SECTION */}

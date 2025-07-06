@@ -22,3 +22,11 @@
     width: 8px;
   }
 }
+
+input[type="checkbox"].accent-custom:checked {
+  accent-color: #ff6900;
+}
+
+.tab-trigger[data-state="active"] {
+  color: #ff7a00 !important;
+}
