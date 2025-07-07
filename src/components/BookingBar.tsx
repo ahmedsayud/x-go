@@ -2,8 +2,8 @@ import React from "react";
 
 const BookingBar: React.FC = () => {
   return (
-    <div className="bg-white shadow-lg rounded-lg w-[90%] flex justify-between items-center mt-[-70px] mb-8 p-6 ">
-      <div className=" rounded-2xl  px-4  flex  md:flex-row gap-4 md:gap-6 w-[75%] max-w-4xl items-center">
+<div className="bg-white shadow-lg rounded-lg w-[90%] flex flex-col md:flex-row justify-between items-center mt-[-70px] mb-8 p-6 gap-4">
+      <div className=" rounded-2xl  px-4  flex  flex-col md:flex-row gap-4 md:gap-6 w-[75%] max-w-4xl items-center">
         {/* الوجهة */}
         <div className="flex flex-col w-[33%] md:w-auto">
           <label className="font-semibold text-gray-700 mb-1 text-sm">Your Destination</label>

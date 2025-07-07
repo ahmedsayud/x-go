@@ -13,7 +13,7 @@ const CarCollection: React.FC = () => (
   <div className=" flex flex-col bg-white pt-10 ">
     <Header />
     <section
-      className="w-full  flex items-end bg-cover bg-center justify-center rounded-b-2xl shadow-lg overflow-hidden mt-10 mb-8"
+      className="w-full h-[80vh] flex items-end bg-cover bg-center justify-center rounded-b-2xl shadow-lg overflow-hidden mt-10 mb-8"
       style={{ backgroundImage: `url(${carHero})` }}
     >
       <BookingBar />
