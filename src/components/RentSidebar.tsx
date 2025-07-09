@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {  Link } from "react-router-dom";
 
 const extrasList = [
   { label: "GPS Navigation System", price: 55 },
@@ -24,14 +25,7 @@ const RentSidebar: React.FC = () => {
   };
 
   return (
-    <div
-      className="gap-5 border border-[#cdcac5] border-opacity-30 rounded-xl shadow mt-10 p-6 w-full  mx-auto"
-      style={{
-        minWidth: 280,
-        maxWidth: 384,
-        minHeight: 400,
-      }}
-    >
+    <div className="gap-5 border border-[#cdcac5] border-opacity-30 rounded-xl shadow mt-10 p-6 w-full  mx-auto">
       <h2 className="text-lg font-semibold text-center mb-4 ">
         Rent This Vehicle
       </h2>
@@ -43,7 +37,6 @@ const RentSidebar: React.FC = () => {
             className="w-full border rounded-lg px-3 py-2 pr-10 focus:outline-none"
             style={{ borderColor: "#cdcac5" }}
           />
-        
         </div>
       </div>
       <div className="mb-4 flex items-center justify-between ">
@@ -54,7 +47,6 @@ const RentSidebar: React.FC = () => {
             className="w-full border rounded-lg px-3 py-2 pr-10 focus:outline-none"
             style={{ borderColor: "#cdcac5" }}
           />
-         
         </div>
       </div>
       <div className="mb-4">
@@ -93,9 +85,12 @@ const RentSidebar: React.FC = () => {
           <span>${total.toFixed(2)}</span>
         </div>
       </div>
-      <button className="w-full bg-[#ff6900] hover:bg-orange-500  font-semibold py-2 rounded-xl mt-2 transition">
+      <Link
+        to="/booking/step2"
+        className="w-full block bg-[#ff6900] hover:bg-orange-500 font-semibold py-2 rounded-xl mt-2 transition text-center text-white"
+      >
         Book Now
-      </button>
+      </Link>
     </div>
   );
 };

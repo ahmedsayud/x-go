@@ -8,9 +8,9 @@ import CarCollection from './pages/CarCollection';
 import Car from './pages/Car';
 // import CarDetails from './pages/CarDetails';
 import Booking from './pages/Booking';
-import BookingStep2 from './pages/BookingStep2';
+import SelectedCarInfo from './pages/SelectedCarInfo';
 import BookingStep3 from './pages/BookingStep3';
-
+import Payment from "./pages/Payment";
 const App: React.FC = () => {
   return (
     <Router>
@@ -21,9 +21,10 @@ const App: React.FC = () => {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/collection" element={<CarCollection />} />
         <Route path="/car" element={<Car />} />
+        <Route path="/payment" element={<Payment />} />
         {/* <Route path="/car/:id" element={<CarDetails />} /> */}
         <Route path="/booking" element={<Booking />} />
-        <Route path="/booking/step2" element={<BookingStep2 />} />
+        <Route path="/booking/step2" element={<SelectedCarInfo />} />
         <Route path="/booking/step3" element={<BookingStep3 />} />
       </Routes>
     </Router>

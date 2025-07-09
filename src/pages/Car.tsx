@@ -20,10 +20,10 @@ const Car: React.FC = () => {
     <div className="min-h-screen  pb-10">
       {/* Header */}
       <Header />
-      <main className="flex-1 container mx-auto px-5 pt-24">
+      <main className=" container mx-auto px-5 pt-24">
         <main className="max-w-6xl mx-auto mt-10 flex flex-col lg:flex-row gap-10">
           {/* Left: Car Images */}
-          <section className="flex-1 flex  gap-6">
+          <section className="flex-1 flex flex-row  gap-6">
             <img
               src={carImg}
               alt="Car"
@@ -40,10 +40,10 @@ const Car: React.FC = () => {
               ))}
             </div>
           </section>
-          <div className="flex  sm:flex-col lg:flex-row gap-2 justify-items-center m-auto">
+          <div className="flex  lg:flex-row sm:flex-col  gap-2 justify-between m-auto">
             {/* Main Content */}
-            <div className="">
-              <div className="grid lg:grid-cols-4 sm:grid-cols-3 gap-4 my-10 w-full">
+            <div className=" w-[70%]">
+              <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-4 my-10 w-full">
                 <CarThumb image={Vector6} text="62.500" />
                 <CarThumb image={solarFuelBold} text="Petrol" />
                 <CarThumb image={Frame290} text="Manual" />
@@ -54,12 +54,12 @@ const Car: React.FC = () => {
                 <CarThumb image={Frame225} text="3.5 L" />
               </div>
               {/* Right: Car Info & Booking */}
-              <section className="w-full flex flex-col gap-6">
+              <div className="w-full flex flex-col gap-6">
                 <CarDetailsTabs />
-              </section>
+              </div>
             </div>
             {/* Sidebar */}
-            <div className="sm:col-span-12 lg:col-span-2 flex justify-center lg:justify-end">
+            <div className="sm:col-span-12 lg:col-span-2 flex justify-center lg:justify-end w-[25%]">
               <RentSidebar />
             </div>
           </div>
