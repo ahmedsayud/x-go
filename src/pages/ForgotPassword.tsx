@@ -11,10 +11,11 @@ const ForgotPassword: React.FC = () => {
         <div className="w-[40%]">
           <div className="flex-1 h-[90%] flex-col  flex flex-col justify-center  md:pl-16 md:pr-10 md:py-0 md:justify-center md:items-start  text-left md:text-left bg-transparent">
             <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 leading-tight">
-            Let’s get you back behind the wheel
+              Let’s get you back behind the wheel
             </h2>
             <p className="text-gray-600 mb-10 max-w-md md:max-w-xs">
-             Lorem ipsum dolor sit amet consectetur. A tellus enim orci a eget porttitor et.
+              Lorem ipsum dolor sit amet consectetur. A tellus enim orci a eget
+              porttitor et.
             </p>
           </div>
           <div className="flex  justify-button  w-full items-center space-x-6 text-sm text-gray-500 md:justify-start justify-start w-full">
@@ -57,13 +58,13 @@ const ForgotPassword: React.FC = () => {
                 />
               </svg>
             </button>
-            <Link to="#" className="hover:underline text-orange-600">
+            <Link to="#" className="hover:underline text-[#cc7f15]">
               Terms
             </Link>
-            <Link to="#" className="hover:underline text-orange-600">
+            <Link to="#" className="hover:underline text-[#cc7f15]">
               Plans
             </Link>
-            <Link to="#" className="hover:underline text-orange-600">
+            <Link to="#" className="hover:underline text-[#cc7f15]">
               Contact Us
             </Link>
           </div>
@@ -76,7 +77,7 @@ const ForgotPassword: React.FC = () => {
               forgot password
             </h3>
             <p className="mb-6">Enter your email to reset your password</p>
-           <div>
+            <div>
               <label className="block mb-2 text-sm font-medium text-gray-700">
                 Password
               </label>
@@ -84,7 +85,7 @@ const ForgotPassword: React.FC = () => {
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="••••••••"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-1 pr-10 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-1 pr-10 focus:outline-none focus:ring-2 focus:ring-[#E6911E]"
                 />
                 <button
                   type="button"
@@ -94,34 +95,61 @@ const ForgotPassword: React.FC = () => {
                 >
                   {showPassword ? (
                     // أيقونة عين مفتوحة
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
                     </svg>
                   ) : (
                     // أيقونة عين مغلقة
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7a9.956 9.956 0 012.293-3.95M6.873 6.872A9.956 9.956 0 0112 5c4.478 0 8.268 2.943 9.542 7a9.956 9.956 0 01-4.293 5.95M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3l18 18" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7a9.956 9.956 0 012.293-3.95M6.873 6.872A9.956 9.956 0 0112 5c4.478 0 8.268 2.943 9.542 7a9.956 9.956 0 01-4.293 5.95M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 3l18 18"
+                      />
                     </svg>
                   )}
                 </button>
-               
               </div>
-               <p className="text-xs text-gray-400 mt-1">
+              <p className="text-xs text-gray-400 mt-1">
                 Use 8 or more characters with a mix of letters, numbers &
                 symbols.
               </p>
             </div>
             <div className="flex justify-between pt-10">
-              <button
-                className=" w-[45%]  text-white bg-orange-500 hover:bg-orange-600 font-bold rounded-lg text-base px-5 py-2 text-center transition-colors shadow-lg"
-              >
+              <button className=" w-[45%]  text-white bg-[#E6911E] hover:bg-[#cc7f15] font-bold rounded-lg text-base px-5 py-2 text-center transition-colors shadow-lg">
                 Submit
               </button>
-              <button
-                className=" w-[45%]   text-black hover:bg-orange-600 font-bold rounded-lg text-base px-5 py-2 text-center transition-colors shadow-lg"
-              >
+              <button className=" w-[45%]   text-black hover:bg-[#cc7f15] font-bold rounded-lg text-base px-5 py-2 text-center transition-colors shadow-lg">
                 Sign Up
               </button>
             </div>

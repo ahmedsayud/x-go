@@ -4,8 +4,8 @@ const CarDetailsTabs = () => {
   return (
     <Tabs.Root
       defaultValue="description"
-      className="w-full max-w-3xl rounded-xl border p-6 shadow-sm bg-white"
-      style={{ borderColor: '#cdcac5' }}
+      className="w-[90%] max-w-3xl min-w-[350px] rounded-xl border p-6 shadow-sm bg-white transition-all duration-300 mx-auto"
+      style={{ borderColor: '#cdcac5', minHeight: '350px' }}
     >
       <Tabs.List className="grid w-full grid-cols-4 bg-transparent border-b mb-6 pb-6" style={{ borderColor: '#cdcac5' }}>
         <Tabs.Trigger value="description" className="tab-trigger">Description</Tabs.Trigger>
@@ -15,7 +15,7 @@ const CarDetailsTabs = () => {
       </Tabs.List>
 
       <Tabs.Content value="description">
-        <div>
+        <div className="w-full">
           <h2 className="text-lg font-semibold mb-2">Description</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
             Lorem ipsum dolor sit amet consectetur. Nec duis dictum vulputate velit ipsum sed. Lectus varius volutpat elit id mauris sollicitudin scelerisque nulla. Quis nulli vulputate duis ante. Quis eget consequat dictum magna ullamcorper tortor ut donec sed. Elit varius nulla senectus tortor donec tellus morbi. Suspendisse ut egestas feugiat justo vulputate.
@@ -28,15 +28,15 @@ const CarDetailsTabs = () => {
       </Tabs.Content>
 
       <Tabs.Content value="specs">
-        <div className="text-gray-500">No specifications available.</div>
+        <div className="text-gray-500 w-full">No specifications available.</div>
       </Tabs.Content>
 
       <Tabs.Content value="gallery">
-        <div className="text-gray-500">No images in the gallery.</div>
+        <div className="text-gray-500 w-full">No images in the gallery.</div>
       </Tabs.Content>
 
       <Tabs.Content value="reviews">
-        <div className="text-gray-500">No reviews yet.</div>
+        <div className="text-gray-500 w-full">No reviews yet.</div>
       </Tabs.Content>
     </Tabs.Root>
   );

@@ -14,18 +14,22 @@ const Payment: React.FC = () => {
       <Header />
       <main className="flex-1 container mx-auto px-4 pt-24">
         <BookingStepper currentStep={3} />
-        <div className="grid  grid-cols-2 gap-5 mt-10 ">
-          <div className="w-[80%]">
-            <PaymentForm />
+        <div className="grid  grid-cols-2 gap-5 mt-10 m-auto">
+          <div className="w-full flex flex-col items-end">
+            <div className="w-">
+              {" "}
+              <PaymentForm />
+            </div>
           </div>
-          <div className="w-[50%]">
-            {" "}
-            <CarBookingSummary
-              transmissionIcon={Frame290}
-              seatsIcon={Group}
-              priceIcon={Vector6}
-              engineIcon={Frame225}
-            />
+          <div className="w-full flex flex-col items-center">
+            <div className="w-[60%]">
+              <CarBookingSummary
+                transmissionIcon={Frame290}
+                seatsIcon={Group}
+                priceIcon={Vector6}
+                engineIcon={Frame225}
+              />
+            </div>
           </div>
         </div>
       </main>

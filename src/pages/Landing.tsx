@@ -1,7 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-// import carHero from "../assets/d715a1cb2f850c1a49ea75f003edab7156d9fc1c.jpg";
+import carHero from "../assets/d715a1cb2f850c1a49ea75f003edab7156d9fc1c.jpg";
 import carCollection from "../assets/images (9).jfif";
 import carCollection1 from "../assets/download.jfif";
 import carCollection2 from "../assets/images (5).jfif";
@@ -18,8 +19,7 @@ import HowItWorks from "../components/HowItWorks";
 import appStoreImg from "../assets/Frame 179.png";
 import playStoreImg from "../assets/Frame 180.png";
 import { Link } from "react-router-dom";
-import AutoCarousel from "../components/AutoCarousel";
-
+// import AutoCarousel from "../components/AutoCarousel";
 
 const cars = [
   {
@@ -65,26 +65,36 @@ const cars = [
     rating: 4.5,
   },
 ];
-const Landing: React.FC = () => {
-  return (
-  <div className="min-h-screen flex flex-col bg-gray-50 pt-10 ">
-      <Header />
-      <AutoCarousel />
+const carTypes = ["All Type", "Ferrari", "Porsche", "Lamborghini"];
 
-      {/* <section
+const Landing: React.FC = () => {
+  const [activeType, setActiveType] = useState("All Type");
+  // فلترة السيارات حسب النوع
+  const filteredCars =
+    activeType === "All Type"
+      ? cars
+      : cars.filter((car) =>
+          car.name.toLowerCase().includes(activeType.toLowerCase())
+        );
+
+  return (
+    <div className="min-h-screen flex flex-col bg-gray-50 pt-10 ">
+      <Header />
+      {/* <AutoCarousel /> */}
+
+      <section
         className="w-full h-[590px] flex items-end bg-cover bg-center justify-center rounded-b-2xl shadow-lg overflow-hidden mb-8 mt-10"
         style={{ backgroundImage: `url(${carHero})` }}
       >
-     
         <h1 className="relative z-20 mb-10 text-3xl md:text-5xl font-bold text-white text-center drop-shadow-lg">
           Own the Thrill – Rent the Drive
         </h1>
-      </section> */}
+      </section>
       <section
-        className="relative w-full max-w-none sm:max-w-6xl mx-auto bg-white rounded-2xl pb-10 py-10 mt-10 mb-12 flex flex-col items-center px-4 md:px-8"
+        className="relative w-full max-w-none sm:max-w-6xl mx-auto bg-white rounded-2xl pb-10 py-10 mt-10 mb-12 flex flex-col items-center px-4 md:px-8 container"
         style={{ zIndex: 2 }}
       >
-        <h2 className="text-xl md:text-2xl font-bold text-orange-500 text-center  mt-10 mb-1">
+        <h2 className="text-xl md:text-2xl font-bold text-[#E6911E] text-center  mt-10 mb-1">
           Collection
         </h2>
         <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-6">
@@ -92,25 +102,31 @@ const Landing: React.FC = () => {
         </h3>
 
         {/* أزرار الفلترة */}
-        <div className="flex flex-wrap gap-3 justify-center mb-8">
-          <button className="bg-orange-100 text-orange-500 font-semibold rounded-full px-5 py-1 text-sm">
-            All Type
-          </button>
-          <button className="bg-gray-100 text-gray-700 rounded-full px-5 py-1 text-sm">
-            Ferrari
-          </button>
-          <button className="bg-gray-100 text-gray-700 rounded-full px-5 py-1 text-sm">
-            Porsche
-          </button>
-          <button className="bg-gray-100 text-gray-700 rounded-full px-5 py-1 text-sm">
-            Lamborghini
-          </button>
+        <div className="flex flex-wrap gap-6 justify-center mb-8">
+          {carTypes.map((type) => (
+            <button
+              key={type}
+              className={`font-semibold rounded-lg px-5 py-2 text-sm
+              ${
+                activeType === type
+                  ? "bg-[#E6911E] text-white shadow "
+                  : "border text-gray-700"
+              }
+            `}
+              onClick={() => setActiveType(type)}
+            >
+              {type}
+            </button>
+          ))}
         </div>
 
         {/* شبكة السيارات */}
-        <div className="w-full grid sm:w-[80%] sm:grid-cols-1 lg:grid-cols-3 gap-8">
-          {cars.map((car, i) => (
-            <div key={i} className="w-full max-w-[95vw] md:max-w-[420px] mx-auto">
+        <div className="w-full grid sm:w-[80%] sm:grid-cols-1 lg:grid-cols-3 gap-8 container px-16">
+          {filteredCars.map((car, i) => (
+            <div
+              key={i}
+              className="w-full max-w-[95vw] md:max-w-[420px] mx-auto"
+            >
               <CarCard {...car} />
             </div>
           ))}
@@ -118,15 +134,15 @@ const Landing: React.FC = () => {
 
         {/* زر عرض المزيد */}
         <Link to="/collection">
-          <button className="mt-10 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full px-8 py-2 transition w-full max-w-xs mx-auto">
+          <button className="mt-10 bg-[#E6911E] text-white font-bold rounded-full px-8 py-2 transition w-full max-w-xs mx-auto">
             See All Collection
           </button>
         </Link>
       </section>
 
       {/* WHY CHOOSE US SECTION */}
-      <section className="w-full max-w-none sm:max-w-6xl mx-auto pt-10 mb-16 flex flex-col items-center px-4 md:px-8">
-        <h4 className="text-orange-500 text-lg mb-2 mt-2 tracking-wide">
+      <section className="w-full max-w-none sm:max-w-6xl mx-auto pt-10 mb-16 flex flex-col items-center px-4 md:px-8 ">
+        <h4 className="text-[#E6911E] text-lg mb-2 mt-2 tracking-wide">
           WHY CHOOSE US
         </h4>
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 w-full  max-w-xl">
@@ -134,27 +150,35 @@ const Landing: React.FC = () => {
           <br /> For Your Needs
         </h2>
 
-        <div className="grid   sm:grid-cols-1 lg:grid-cols-2 gap-6 m-auto  md:gap-8 ">
-          <div className="w-full max-w-none sm:max-w-[420px] mx-auto"><WhyChooseCard
-            image={icon1}
-            title="Flexible Dates"
-            description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
-          /></div>
-          <div className="w-full max-w-none sm:max-w-[420px] mx-auto"><WhyChooseCard
-            image={icon2}
-            title="Plan Your Trip"
-            description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
-          /></div>
-          <div className="w-full max-w-none sm:max-w-[420px] mx-auto"><WhyChooseCard
-            image={icon3}
-            title="Flexible Dates"
-            description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
-          /></div>
-          <div className="w-full max-w-none sm:max-w-[420px] mx-auto"><WhyChooseCard
-            image={icon4}
-            title="Plan Your Trip"
-            description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
-          /></div>
+        <div className="grid   sm:grid-cols-1 lg:grid-cols-2 gap-6 m-auto  md:gap-8 container px-16 ">
+          <div className="w-full max-w-none sm:max-w-[420px] mx-auto">
+            <WhyChooseCard
+              image={icon1}
+              title="Flexible Dates"
+              description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
+            />
+          </div>
+          <div className="w-full max-w-none sm:max-w-[420px] mx-auto">
+            <WhyChooseCard
+              image={icon2}
+              title="Plan Your Trip"
+              description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
+            />
+          </div>
+          <div className="w-full max-w-none sm:max-w-[420px] mx-auto">
+            <WhyChooseCard
+              image={icon3}
+              title="Flexible Dates"
+              description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
+            />
+          </div>
+          <div className="w-full max-w-none sm:max-w-[420px] mx-auto">
+            <WhyChooseCard
+              image={icon4}
+              title="Plan Your Trip"
+              description="Lorem ipsum dolor sit amet consectetur. Nulla dignissim donec vehicula elit senectus id. Et ultricies diam justo amet purus pharetra amet sit viverra."
+            />
+          </div>
         </div>
       </section>
 

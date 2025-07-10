@@ -54,7 +54,7 @@ const CarFilterSidebar: React.FC = () => {
               </li>
             ))}
           </ul>
-          <button className="text-orange-500 text-xs mt-2 underline">
+          <button className="text-[#E6911E] text-xs mt-2 underline">
             See More
           </button>
         </div>
@@ -66,7 +66,7 @@ const CarFilterSidebar: React.FC = () => {
             type="range"
             min={0}
             max={500}
-            className="w-full accent-orange-500"
+            className="w-full accent-[#E6911E]"
           />
           <div className="flex justify-between mt-2 text-sm">
             <span className="bg-gray-100 px-2 py-1 rounded-lg font-bold">
@@ -76,7 +76,7 @@ const CarFilterSidebar: React.FC = () => {
               $300
             </span>
           </div>
-          <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full px-4 py-2 mt-4 transition">
+          <button className="w-full bg-[#E6911E]  text-white font-bold rounded-full px-4 py-2 mt-4 transition">
             Apply
           </button>
         </div>
@@ -112,7 +112,7 @@ const CarFilterSidebar: React.FC = () => {
               </li>
             ))}
           </ul>
-          <button className="text-orange-500 text-xs mt-2 underline">
+          <button className="text-[#E6911E] text-xs mt-2 underline">
             See More
           </button>
         </div>

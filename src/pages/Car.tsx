@@ -40,7 +40,7 @@ const Car: React.FC = () => {
               ))}
             </div>
           </section>
-          <div className="flex  lg:flex-row sm:flex-col  gap-2 justify-between m-auto">
+          <div className="flex w-full lg:flex-row sm:flex-col  gap-2 justify-between m-auto">
             {/* Main Content */}
             <div className=" w-[70%]">
               <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-4 my-10 w-full">

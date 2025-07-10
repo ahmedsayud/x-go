@@ -62,23 +62,23 @@ const SelectedCarInfo: React.FC = () => {
                 <input
                   type="email"
                   placeholder="Email"
-                  className="border border-[#cdcac5] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-200"
+                  className="border border-[#cdcac5] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#E6911E]"
                 />
                 <input
                   type="password"
                   placeholder="Password"
-                  className="border border-[#cdcac5] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-200"
+                  className="border border-[#cdcac5] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#E6911E]"
                 />
                 <Link
-    to="/payment"
-    className="w-full bg-[#ff6900] hover:bg-orange-500 font-semibold py-2 rounded-lg mt-2 transition text-white flex items-center justify-center"
-  >
-    Sign in
-  </Link>
+                  to="/payment"
+                  className="w-full bg-[#E6911E] hover:bg-[#E6911E] font-semibold py-2 rounded-lg mt-2 transition text-white flex items-center justify-center"
+                >
+                  Sign in
+                </Link>
               </form>
               <div className="text-sm mt-2 text-center">
                 Don&apos;t have an account?{" "}
-                <a href="#" className="text-orange-500 hover:underline">
+                <a href="#" className="text-[#E6911E] hover:underline">
                   Sign Up
                 </a>
               </div>

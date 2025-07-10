@@ -7,14 +7,14 @@ const Header: React.FC = () => {
       {/* Logo */}
       <div className="flex items-center justify-between w-[80%] header-content-scroll">
         <div className="flex items-center">
-          <img src={logo} alt="Logo" className="w-20" />
+          <img src={logo} alt="Logo" className="w-25" />
         </div>
         {/* Links */}
         <ul className="flex items-center space-x-8 font-medium text-base">
           <li>
             <Link
               to="/home"
-              className="text-gray-700 hover:text-orange-500 transition"
+              className="text-gray-700 hover:text-[#E6911E] transition"
             >
               Home Page
             </Link>
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
           <li>
             <Link
               to="#"
-              className="text-gray-700 hover:text-orange-500 transition"
+              className="text-gray-700 hover:text-[#E6911E] transition"
             >
               About
             </Link>
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           <li>
             <Link
               to="#"
-              className="text-gray-700 hover:text-orange-500 transition"
+              className="text-gray-700 hover:text-[#E6911E] transition"
             >
               How it works
             </Link>
@@ -38,14 +38,14 @@ const Header: React.FC = () => {
           <li>
             <Link
               to="#"
-              className="text-gray-700 hover:text-orange-500 transition"
+              className="text-gray-700 hover:text-[#E6911E] transition"
             >
               Charging
             </Link>
           </li>
           {/* Dropdown */}
           <li className="relative group">
-            <button className="flex items-center text-gray-700 hover:text-orange-500 transition">
+            <button className="flex items-center text-gray-700 hover:text-[#E6911E] transition">
               Vehicles
               <svg
                 className="w-4 h-4 ml-1"
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
               <li>
                 <Link
                   to="#"
-                  className="block px-4 py-2 text-gray-700 hover:bg-orange-100"
+                  className="block px-4 py-2 text-gray-700 hover:bg-[#cc7f15]"
                 >
                   Car 1
                 </Link>
@@ -74,7 +74,7 @@ const Header: React.FC = () => {
               <li>
                 <Link
                   to="#"
-                  className="block px-4 py-2 text-gray-700 hover:bg-orange-100"
+                  className="block px-4 py-2 text-gray-700 hover:bg-[#cc7f15]"
                 >
                   Car 2
                 </Link>
@@ -84,14 +84,14 @@ const Header: React.FC = () => {
           <li>
             <Link
               to="#"
-              className="text-gray-700 hover:text-orange-500 transition"
+              className="text-gray-700 hover:text-[#E6911E] transition"
             >
               Language
             </Link>
           </li>
         </ul>
         {/* Get the app Button */}
-        <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full px-8 py-2 ml-8 transition">
+        <button className="bg-[#E6911E] text-white font-bold rounded-full px-8 py-2 ml-8 transition">
           Get the app
         </button>
       </div>

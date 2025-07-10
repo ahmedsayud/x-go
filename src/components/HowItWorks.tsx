@@ -18,7 +18,7 @@ const cars = [
     image: car1,
     bookedDays: 7,
     rating: 4.5,
-    location: "Alexandria, Egypt",
+    location: " Egypt",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const cars = [
     image: car2,
     bookedDays: 7,
     rating: 4.5,
-    location: "Alexandria, Egypt",
+    location: " Egypt",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const cars = [
     image: car3,
     bookedDays: 7,
     rating: 4.5,
-    location: "Alexandria, Egypt",
+    location: " Egypt",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const cars = [
     image: car4,
     bookedDays: 7,
     rating: 4.5,
-    location: "Alexandria, Egypt",
+    location: " Egypt",
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const cars = [
     image: car5,
     bookedDays: 7,
     rating: 4.5,
-    location: "Alexandria, Egypt",
+    location: " Egypt",
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const cars = [
     image: car6,
     bookedDays: 7,
     rating: 4.5,
-    location: "Alexandria, Egypt",
+    location: " Egypt",
   },
   {
     id: 7,
@@ -72,7 +72,7 @@ const cars = [
     image: car7,
     bookedDays: 7,
     rating: 4.5,
-    location: "Alexandria, Egypt",
+    location: " Egypt",
   },
   {
     id: 8,
@@ -81,7 +81,7 @@ const cars = [
     image: car8,
     bookedDays: 7,
     rating: 4.5,
-    location: "Alexandria, Egypt",
+    location: " Egypt",
   },
   {
     id: 9,
@@ -90,7 +90,7 @@ const cars = [
     image: car9,
     bookedDays: 7,
     rating: 4.5,
-    location: "Alexandria, Egypt",
+    location: " Egypt",
   },
 ];
 const steps = [
@@ -120,7 +120,7 @@ const steps = [
 const HowItWorks: React.FC = () => (
   <section className="grid w-[90%] lg:grid-cols-2 sm:grid-cols-1  max-w-screen-xl gap-10  m-auto p-8 mt-12 mb-12">
     <div className="max-w-lg sm:block  flex-1  m-auto">
-      <h4 className="text-orange-500 font-bold text-base mb-2">How It Works</h4>
+      <h4 className="text-[#E6911E] font-bold text-base mb-2">How It Works</h4>
       <h2 className="font-bold text-2xl md:text-4xl mb-8">
         Step by step to rent a car on our platform
       </h2>
@@ -130,14 +130,14 @@ const HowItWorks: React.FC = () => (
             <span
               className={`flex-shrink-0 w-12 h-12 md:w-16 md:h-16 font-medium text-lg md:text-xl rounded-full flex items-center justify-center font-bold mr-5 ${
                 idx === 0
-                  ? "bg-orange-500 text-white"
-                  : "bg-gray-200 text-gray-700"
+                  ? "bg-[#E6911E]"
+                  : " text-[#7B7B7B]   border border-[#7B7B7B]"
               }`}
             >
               {step.number}
             </span>
             <div>
-              <h3 className="font-semibold text-lg md:text-2xl mb-1">
+              <h3 className="text-[25px] font-semibold md:text-2xl mb-1">
                 {step.title}
               </h3>
               {step.description && (
@@ -158,7 +158,7 @@ const HowItWorks: React.FC = () => (
           {cars.map((car) => (
             <div
               key={car.id}
-              className="flex-shrink-0 w-50  bg-white rounded-lg shadow-md p-3 last:mr-0 px-2"
+              className="flex-shrink-0 w-  bg-white rounded-lg shadow-md p-3 last:mr-0 px-2"
             >
               <img
                 src={car.image}
@@ -176,7 +176,7 @@ const HowItWorks: React.FC = () => (
         {cars.map((car) => (
           <div
             key={car.id}
-            className="flex flex-col gap-y-4 w-full md:w-64 h-[420px] md:h-[400px] rounded-lg shadow-md bg-white mb-6 md:mb-0"
+            className=" flex-shrink-0 flex flex-col gap-y-4 w-[300px] md:w-64 h-[420px] md:h-[400px] rounded-lg shadow-md bg-white mb-6 md:mb-0"
           >
             <h1 className="font-semibold text-lg md:text-2xl p-4">
               200+ Car Available

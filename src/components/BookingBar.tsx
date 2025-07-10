@@ -10,7 +10,7 @@ const BookingBar: React.FC = () => {
           <input
             type="text"
             placeholder="Add your location"
-            className="border rounded-lg w-[100%] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="border rounded-lg w-[100%] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#E6911E] "
           />
         </div>
         {/* تاريخ الاستلام */}
@@ -18,7 +18,7 @@ const BookingBar: React.FC = () => {
           <label className="font-semibold text-gray-700 mb-1 text-sm">Pick-up Date</label>
           <input
             type="date"
-            className="border rounded-lg w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="border rounded-lg w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#E6911E]"
           />
         </div>
         {/* تاريخ التسليم */}
@@ -26,13 +26,13 @@ const BookingBar: React.FC = () => {
           <label className="font-semibold text-gray-700 mb-1 text-sm">Drop-OFF Date</label>
           <input
             type="date"
-            className="border rounded-lg w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="border rounded-lg w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#E6911E]"
           />
         </div>
         {/* زر الحجز */}
       
       </div >
-        <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full px-8 py-2 transition w-[25%] md:w-auto mt-2 md:mt-6">
+        <button className="bg-[#E6911E]  text-white font-bold rounded-full px-8 py-2 transition w-[25%] md:w-auto mt-2 md:mt-6">
           Book A Car
         </button>
     </div>

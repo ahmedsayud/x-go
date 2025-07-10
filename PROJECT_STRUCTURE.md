@@ -78,7 +78,7 @@ export default NewPage
 
 ### استخدام Tailwind CSS
 ```jsx
-<div className="bg-orange-500 text-white p-4 rounded-lg hover:bg-orange-600 transition-colors">
+<div className="bg-[#E6911E]  text-white p-4 rounded-lg  transition-colors">
   زر تفاعلي
 </div>
 
@@ -109,11 +109,10 @@ npm run lint
 
 ## 🎨 أمثلة Tailwind CSS
 
-- `bg-orange-500` - خلفية برتقالية
+- `bg-[#E6911E]` - خلفية برتقالية
 - `text-white` - نص أبيض
 - `p-4` - مسافة داخلية
 - `rounded-lg` - زوايا دائرية
 - `shadow` - ظل
-- `hover:bg-orange-600` - تغيير اللون عند التمرير
 - `transition-colors` - انتقال سلس للألوان
 - `grid grid-cols-3` - شبكة من 3 أعمدة 

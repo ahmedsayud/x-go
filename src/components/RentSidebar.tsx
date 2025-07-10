@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const extrasList = [
   { label: "GPS Navigation System", price: 55 },
@@ -87,7 +87,7 @@ const RentSidebar: React.FC = () => {
       </div>
       <Link
         to="/booking/step2"
-        className="w-full block bg-[#ff6900] hover:bg-orange-500 font-semibold py-2 rounded-xl mt-2 transition text-center text-white"
+        className="w-full block bg-[#E6911E] hover:bg-[#E6911E] font-semibold py-2 rounded-xl mt-2 transition text-center text-white"
       >
         Book Now
       </Link>

@@ -14,7 +14,7 @@ const BookingStepper: React.FC<BookingStepperProps> = ({ currentStep }) => {
   return (
     <div className="w-full my-6">
       <h2 className="text-2xl font-bold text-center my-6">
-        <span className="text-[#ff6900]">P</span>ayment
+        <span className="text-[#E6911E]">P</span>ayment
       </h2>
       <div className="flex items-center justify-center w-full">
         {steps.map((step, idx) => {
@@ -27,10 +27,10 @@ const BookingStepper: React.FC<BookingStepperProps> = ({ currentStep }) => {
                 <div
                   className={`flex items-center justify-center w-7 h-7 rounded-full  transition-colors duration-200 ${
                     isActive
-                      ? "bg-[#ff6900]"
+                      ? "bg-[#E6911E]"
                       : isCompleted
-                      ? "bg-orange-200 border-orange-400 bg-[#ff6900]"
-                      : "bg-white border-gray-300 text-gray-400"
+                      ? "bg-[#E6911E] border-[#E6911E] bg-[#E6911E]"
+                      : "bg-white border-gray-500 text-gray-500"
                   }`}
                 >
                   {stepNumber}
@@ -38,9 +38,9 @@ const BookingStepper: React.FC<BookingStepperProps> = ({ currentStep }) => {
                 <span
                   className={`ml-2 mr-4 font-medium text-sm ${
                     isActive
-                      ? "text-orange-500"
+                      ? "text-[#E6911E]"
                       : isCompleted
-                      ? "text-orange-400"
+                      ? "text-[#E6911E]"
                       : "text-gray-500"
                   }`}
                 >

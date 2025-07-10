@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import cashIcon from "../assets/Payment Form Icon/ion_cash.png"; // ضع مسار الأيقونة الحقيقية هنا
+import visaIcon from "../assets/Payment Form Icon/ion_cash.png"; // ضع مسار أيقونة الفيزا هنا
 
 const PaymentForm: React.FC = () => {
   const [paymentMethod, setPaymentMethod] = useState("cash");
@@ -7,51 +10,93 @@ const PaymentForm: React.FC = () => {
   return (
     <div className="bg-white rounded-xl shadow-lg p-6 max-w-xl w-full mx-auto">
       <h2 className="text-xl font-bold text-[#E6911E] mb-6">Payment</h2>
-      <div className="flex flex-col gap-4 mb-6">
-        <label className="flex items-center gap-3 cursor-pointer">
-          <input
-            type="radio"
-            name="paymentMethod"
-            value="cash"
-            checked={paymentMethod === "cash"}
-            onChange={() => setPaymentMethod("cash")}
-            className="accent-[#E6911E]"
-          />
-          <span className="font-semibold">Cash on delivery</span>
-          <span className="text-xs text-gray-500">Pay in cash when your order is delivered to your location</span>
-        </label>
-        <label className="flex items-center gap-3 cursor-pointer">
-          <input
-            type="radio"
-            name="paymentMethod"
-            value="visa"
-            checked={paymentMethod === "visa"}
-            onChange={() => setPaymentMethod("visa")}
-            className="accent-[#E6911E]"
-          />
-          <span className="font-semibold flex items-center gap-2">
-            <span className="text-lg">VISA</span>
-            <span className="text-xs text-gray-500">Credit Card or Debit Card</span>
+      <div className="flex flex-col gap-3 mb-6">
+        {/* Cash on delivery */}
+        <div
+          className={`flex items-center justify-between  px-4 py-3 cursor-pointer transition  ${
+            paymentMethod === "cash"
+              ? "border-[#E6911E] ring-2 ring-[#E6911E] border"
+              : "border-gray-200 border"
+          }`}
+          onClick={() => setPaymentMethod("cash")}
+        >
+          <div className="flex items-center gap-4">
+            <img
+              src={cashIcon}
+              alt="Cash"
+              className="w-10 h-10 object-contain"
+            />
+            <div>
+              <div className="font-semibold text-lg text-gray-900">
+                Cash on delivery
+              </div>
+              <div className="text-sm text-gray-500 mt-1">
+                Pay in cash when your car is delivered to your location
+              </div>
+            </div>
+          </div>
+          <span
+            className={`inline-block w-6 h-6 rounded-full border-1 flex items-center justify-center relative ${
+              paymentMethod === "cash" ? "border-[#E6911E]" : "border-gray-300"
+            }`}
+          >
+            {paymentMethod === "cash" && (
+              <span className="w-3 h-3 bg-[#E6911E] rounded-full block  absolute top-[5px] right-[5px]"></span>
+            )}
           </span>
-        </label>
+        </div>
+        {/* VISA */}
+        <div
+          className={`flex items-center justify-between  px-4 py-3 cursor-pointer transition  ${
+            paymentMethod === "visa"
+              ? "border-[#E6911E] ring-2 ring-[#E6911E] border"
+              : "border-gray-200 border"
+          }`}
+          onClick={() => setPaymentMethod("visa")}
+        >
+          <div className="flex items-center gap-4">
+            <img
+              src={visaIcon}
+              alt="Visa"
+              className="w-10 h-10 object-contain"
+            />
+            <div>
+              <div className="font-semibold text-lg text-gray-900">
+                Credit Card or Debit Card
+              </div>
+              <div className="text-sm text-gray-500 mt-1">
+                Pay with your credit or debit card
+              </div>
+            </div>
+          </div>
+          <span
+            className={`inline-block w-6 h-6 rounded-full border flex items-center justify-center relative ${
+              paymentMethod === "visa" ? "border-[#E6911E]" : "border-gray-300"
+            }`}
+          >
+            {paymentMethod === "visa" && (
+              <span className="w-3 h-3 bg-[#E6911E] rounded-full block absolute top-[5px] right-[5px]"></span>
+            )}
+          </span>
+        </div>
       </div>
       {paymentMethod === "visa" && (
         <div className="flex flex-col gap-4 mb-6">
           <input
             type="text"
             placeholder="Card Number"
-            className="border border-[#cdcac5] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-200"
+            className="border border-[#cdcac5] rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#E6911E]"
           />
           <div className="flex gap-4">
             <input
               type="text"
               placeholder="Exp Date"
-              className="border border-[#cdcac5] rounded-lg px-3 py-2 w-1/2 focus:outline-none focus:ring-2 focus:ring-orange-200"
+              className="border border-[#cdcac5] rounded-lg px-3 py-2 w-1/2 focus:outline-none focus:ring-2 focus:ring-[#E6911E]"
             />
             <input
               type="text"
               placeholder="CVC"
-              className="border border-[#cdcac5] rounded-lg px-3 py-2 w-1/2 focus:outline-none focus:ring-2 focus:ring-orange-200"
+              className="border border-[#cdcac5] rounded-lg px-3 py-2 w-1/2 focus:outline-none focus:ring-2 focus:ring-[#E6911E]"
             />
           </div>
         </div>
@@ -61,18 +106,18 @@ const PaymentForm: React.FC = () => {
         <input
           type="text"
           placeholder="Address"
-          className="border border-[#cdcac5] rounded-lg px-3 py-2 mb-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-200"
+          className="border border-[#cdcac5] rounded-lg px-3 py-2 mb-3 w-full focus:outline-none focus:ring-2 focus:ring-[#E6911E]"
         />
         <div className="flex gap-4">
           <input
             type="text"
             placeholder="Country"
-            className="border border-[#cdcac5] rounded-lg px-3 py-2 w-1/2 focus:outline-none focus:ring-2 focus:ring-orange-200"
+            className="border border-[#cdcac5] rounded-lg px-3 py-2 w-1/2 focus:outline-none focus:ring-2 focus:ring-[#E6911E]"
           />
           <input
             type="text"
             placeholder="Zip Code"
-            className="border border-[#cdcac5] rounded-lg px-3 py-2 w-1/2 focus:outline-none focus:ring-2 focus:ring-orange-200"
+            className="border border-[#cdcac5] rounded-lg px-3 py-2 w-1/2 focus:outline-none focus:ring-2 focus:ring-[#E6911E]"
           />
         </div>
         <label className="flex items-center gap-2 mt-3">
@@ -82,14 +127,19 @@ const PaymentForm: React.FC = () => {
             onChange={() => setSaveInfo(!saveInfo)}
             className="accent-[#E6911E]"
           />
-          <span className="text-sm text-gray-600">Securely Save my Information For 1-click Checkout</span>
+          <span className="text-sm text-gray-600">
+            Securely Save my Information For 1-click Checkout
+          </span>
         </label>
       </div>
-      <button className="w-full bg-[#E6911E] hover:bg-orange-500 font-semibold py-2 rounded-lg text-white text-lg transition">
+      <Link
+        to="/booking-success"
+        className="w-full bg-[#E6911E] hover:bg-[#E6911E] font-semibold py-2 rounded-lg text-white text-lg transition flex items-center justify-center"
+      >
         Pay $963
-      </button>
+      </Link>
     </div>
   );
 };
 
-export default PaymentForm; 
+export default PaymentForm;

@@ -11,6 +11,7 @@ import Booking from './pages/Booking';
 import SelectedCarInfo from './pages/SelectedCarInfo';
 import BookingStep3 from './pages/BookingStep3';
 import Payment from "./pages/Payment";
+import BookingSuccess from "./pages/BookingSuccess";
 const App: React.FC = () => {
   return (
     <Router>
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <Route path="/booking" element={<Booking />} />
         <Route path="/booking/step2" element={<SelectedCarInfo />} />
         <Route path="/booking/step3" element={<BookingStep3 />} />
+        <Route path="/booking-success" element={<BookingSuccess />} />
       </Routes>
     </Router>
   );
