@@ -118,8 +118,8 @@ const steps = [
 ];
 
 const HowItWorks: React.FC = () => (
-  <section className="grid w-[90%] lg:grid-cols-2 sm:grid-cols-1  max-w-screen-xl gap-10  m-auto p-8 mt-12 mb-12">
-    <div className="max-w-lg sm:block  flex-1  m-auto">
+  <section className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row gap-10 p-4 sm:p-6 md:p-8 mt-8 mb-12">
+    <div className="w-full lg:w-1/2 max-w-lg flex-1 mx-auto">
       <h4 className="text-[#E6911E] font-bold text-base mb-2">How It Works</h4>
       <h2 className="font-bold text-2xl md:text-4xl mb-8">
         Step by step to rent a car on our platform
@@ -130,14 +130,14 @@ const HowItWorks: React.FC = () => (
             <span
               className={`flex-shrink-0 w-12 h-12 md:w-16 md:h-16 font-medium text-lg md:text-xl rounded-full flex items-center justify-center font-bold mr-5 ${
                 idx === 0
-                  ? "bg-[#E6911E]"
-                  : " text-[#7B7B7B]   border border-[#7B7B7B]"
+                  ? "bg-[#E6911E] text-white"
+                  : "text-[#7B7B7B] border border-[#7B7B7B] bg-white"
               }`}
             >
               {step.number}
             </span>
             <div>
-              <h3 className="text-[25px] font-semibold md:text-2xl mb-1">
+              <h3 className="text-xl md:text-2xl font-semibold mb-1">
                 {step.title}
               </h3>
               {step.description && (
@@ -150,52 +150,53 @@ const HowItWorks: React.FC = () => (
         ))}
       </ol>
     </div>
-    <div className=" max-w-xl sm:w-[100%] w-full flex-1 m-auto">
-      <div className="mb-8 mt-10 sm:w-[100%] ">
-        <h4 className="font-medium text-xl md:text-2xl mb-4">Car Type</h4>
-
-        <div className="flex  gap-4 overflow-x-auto whitespace-nowrap hide-scrollbar pb-2 hide-scrollbar pb-2">
+    <div className="w-full lg:w-1/2 max-w-xl flex-1 mx-auto flex flex-col gap-8">
+      <div className="mb-4 mt-6 w-full">
+        <h4 className="font-medium text-lg md:text-2xl mb-4">Car Type</h4>
+        <div className="flex gap-3 sm:gap-4 overflow-x-auto whitespace-nowrap hide-scrollbar pb-2">
           {cars.map((car) => (
             <div
               key={car.id}
-              className="flex-shrink-0 w-  bg-white rounded-lg shadow-md p-3 last:mr-0 px-2"
+              className="flex-shrink-0 w-32 sm:w-36 md:w-40 bg-white rounded-lg shadow-md p-2 last:mr-0 mx-1"
             >
               <img
                 src={car.image}
                 alt={car.name}
-                className="object-cover rounded-lg mb-2 w-full h-52 md:h-32"
+                className="rounded-lg mb-2 mx-auto bg-gray-100"
+                style={{ width: 96, height: 96, objectFit: 'contain' }}
               />
-              <h5 className="font-normal text-base md:text-lg text-center">
+              <h5 className="font-normal text-xs sm:text-sm md:text-base text-center">
                 {car.name}
               </h5>
             </div>
           ))}
         </div>
       </div>
-      <div className="flex gap-4 overflow-x-auto whitespace-nowrap hide-scrollbar pb-2 hide-scrollbar pb-2">
+      <div className="flex gap-4 overflow-x-auto whitespace-nowrap hide-scrollbar pb-2">
         {cars.map((car) => (
           <div
             key={car.id}
-            className=" flex-shrink-0 flex flex-col gap-y-4 w-[300px] md:w-64 h-[420px] md:h-[400px] rounded-lg shadow-md bg-white mb-6 md:mb-0"
+            className="flex-shrink-0 flex flex-col gap-y-3 w-64 md:w-72 h-[340px] md:h-[400px] rounded-lg shadow-md bg-white mb-4 md:mb-0 mx-1"
           >
-            <h1 className="font-semibold text-lg md:text-2xl p-4">
+            <h1 className="font-semibold text-base md:text-xl p-3 md:p-4">
               200+ Car Available
             </h1>
             <img
               src={car.image}
               alt={car.name}
-              className="object-cover rounded-lg mb-2 w-full h-56 md:h-48"
+              className="rounded-lg mb-2 mx-auto bg-gray-100"
+              style={{ width: 120, height: 80, objectFit: 'contain' }}
             />
-            <div className="p-4">
-              <p className="font-medium text-base md:text-lg">{car.name}</p>
-              <p className="font-medium text-base md:text-lg">
+            <div className="p-3 md:p-4">
+              <p className="font-medium text-sm md:text-lg">{car.name}</p>
+              <p className="font-medium text-sm md:text-lg">
                 {car.rating}
                 <span className="text-[#7b7b7b]">/Day</span>
               </p>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-2">
                 <div className="flex items-center">
                   <svg
-                    className="w-5 h-5 mr-1"
+                    className="w-4 h-4 md:w-5 md:h-5 mr-1"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -212,7 +213,7 @@ const HowItWorks: React.FC = () => (
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <p className="font-normal text-base md:text-lg">
+                  <p className="font-normal text-xs md:text-base">
                     {car.location}
                   </p>
                 </div>
@@ -220,7 +221,7 @@ const HowItWorks: React.FC = () => (
                   {car.rating}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5 text-yellow-400"
+                    className="w-4 h-4 md:w-5 md:h-5 text-yellow-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >

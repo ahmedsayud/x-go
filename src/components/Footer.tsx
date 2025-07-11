@@ -1,15 +1,15 @@
 import logo from '../assets/logo.png';
 
 const Footer: React.FC = () => (
-  <footer className="w-full   mt-10 text-gray-700 text-sm">
-    <div className="max-w-6xl mx-auto flex  sm:flex-row justify-between items-start gap-8 px-4 w-[80%]">
+  <footer className="w-full mt-10 text-gray-700 text-sm bg-white ">
+    <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 px-4 w-full md:w-[90%]">
       {/* الشعار والنص */}
-      <div className="flex-1 gap-2 m-auto">
+      <div className="flex-1 flex flex-col items-center md:items-start gap-2 mb-6 md:mb-0">
         <img src={logo} alt="XGO Car Rental" className="w-32 mb-2" />
-        <p className="text-gray-700 sm:w-[330%]">Stay Connected with us to get new update information</p>
+        <p className="text-gray-700 text-center md:text-left max-w-xs">Stay Connected with us to get new update information</p>
       </div>
       {/* الأعمدة */}
-      <div className="flex-1 grid lg:grid-cols-4 m-auto text-center sm:grid-cols-2 gap-6 w-full">
+      <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-6 w-full text-center md:text-left">
         <div>
           <h5 className="font-bold mb-2">Product</h5>
           <ul className="space-y-1">

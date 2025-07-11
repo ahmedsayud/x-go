@@ -19,7 +19,7 @@ const CarFilterSidebar: React.FC = () => {
   return (
     <aside className=" sticky top-[150px] w-full  ">
      
-      <div className=" bg-white   shadow-md p-6 w-full max-w-xs min-w-[350px]  top-24 flex flex-col gap-6">
+      <div className=" bg-white   shadow-md p-6 w-full max-w-lg min-w-[350px]  top-24 flex flex-col gap-6">
          {/* Car Brands */}
         <div className=" bg-gray-50 p-5 border border-gray-200 rounded-lg w-full">
           <h3 className="font-bold text-lg mb-3">Car Brands</h3>

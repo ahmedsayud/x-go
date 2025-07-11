@@ -19,7 +19,7 @@ const CarBookingSummary: React.FC<CarBookingSummaryProps> = ({
 }) => {
   return (
     <div className="shadow-lg rounded-xl p-3 flex flex-col items-center">
-      <div className="flex justify-around ">
+      <div className="flex justify-around  ">
         <img
           src={carImage}
           alt={carName}
@@ -32,7 +32,7 @@ const CarBookingSummary: React.FC<CarBookingSummaryProps> = ({
       </div>
       <div className="w-full gap-2 mb-2 flex flex-col gap-6">
         <div className="grid grid-cols-2 gap-5">
-          <div className="flex justify-evenly items-center gap-2 border border-[#cdcac5] w-[120px] h-[37px] rounded-lg ">
+          <div className="flex justify-between px-6 items-center gap-2 border border-[#cdcac5] w-[120px] h-[37px] rounded-lg ">
             <img
               src={transmissionIcon}
               alt="Manual"
@@ -40,7 +40,7 @@ const CarBookingSummary: React.FC<CarBookingSummaryProps> = ({
             />
             <span className="text-base font-medium">Manual</span>
           </div>
-          <div className="flex justify-evenly items-center gap-2 border border-[#cdcac5] w-[120px] h-[37px] rounded-lg ">
+          <div className="flex justify-between px-6 items-center gap-2 border border-[#cdcac5] w-[120px] h-[37px] rounded-lg ">
             <img
               src={seatsIcon}
               alt="2 Seates"
@@ -48,7 +48,7 @@ const CarBookingSummary: React.FC<CarBookingSummaryProps> = ({
             />
             <span className="text-base font-medium">2 Seates</span>
           </div>
-          <div className="flex justify-evenly items-center gap-2 border border-[#cdcac5] w-[120px] h-[37px] rounded-lg ">
+          <div className="flex justify-between px-6 items-center gap-2 border border-[#cdcac5] w-[120px] h-[37px] rounded-lg ">
             <img
               src={priceIcon}
               alt="62.500"
@@ -56,7 +56,7 @@ const CarBookingSummary: React.FC<CarBookingSummaryProps> = ({
             />
             <span className="text-base font-medium">62.500</span>
           </div>
-          <div className="flex justify-evenly items-center gap-2 border border-[#cdcac5] w-[120px] h-[37px] rounded-lg ">
+          <div className="flex justify-between px-6 items-center gap-2 border border-[#cdcac5] w-[120px] h-[37px] rounded-lg ">
             <img
               src={engineIcon}
               alt="3.5 L"

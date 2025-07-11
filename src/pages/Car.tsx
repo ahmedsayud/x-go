@@ -17,33 +17,33 @@ import solarFuelBold from "../assets/Car Details Card Icon/solar_fuel-bold.png";
 
 const Car: React.FC = () => {
   return (
-    <div className="min-h-screen  pb-10">
+    <div className="min-h-screen pb-10 flex flex-col">
       {/* Header */}
       <Header />
-      <main className=" container mx-auto px-5 pt-24">
-        <main className="max-w-6xl mx-auto mt-10 flex flex-col lg:flex-row gap-10">
+      <main className="container mx-auto px-2 sm:px-4 md:px-8 pt-24">
+        <div className="max-w-6xl mx-auto mt-10 gap-10">
           {/* Left: Car Images */}
-          <section className="flex-1 flex flex-row  gap-6">
+          <section className="flex-1 flex flex-col md:flex-row gap-6">
             <img
               src={carImg}
               alt="Car"
-              className="rounded-xl w-[75%] h-[350px] object-cover shadow-md"
+              className="rounded-xl w-full md:w-[75%] h-[220px] md:h-[350px] object-cover shadow-md mx-auto"
             />
-            <div className="grid grid-cols-2  gap-4">
+            <div className="grid grid-cols-4 md:grid-cols-2 gap-2 md:gap-4 mt-4 md:mt-0 w-full md:w-auto">
               {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
                 <img
                   key={i}
                   src={carImg}
                   alt="Car thumb"
-                  className="w-24 h-16 rounded-lg object-cover border border-gray-200"
+                  className="w- h-12 md:w-24 md:h-16 rounded-lg object-cover border border-gray-200 mx-auto"
                 />
               ))}
             </div>
           </section>
-          <div className="flex w-full lg:flex-row sm:flex-col  gap-2 justify-between m-auto">
+          <div className="flex flex-col lg:flex-row w-full gap-6 justify-between m-auto">
             {/* Main Content */}
-            <div className=" w-[70%]">
-              <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-4 my-10 w-full">
+            <div className="w-full lg:w-[75%]">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-6 w-full">
                 <CarThumb image={Vector6} text="62.500" />
                 <CarThumb image={solarFuelBold} text="Petrol" />
                 <CarThumb image={Frame290} text="Manual" />
@@ -54,21 +54,20 @@ const Car: React.FC = () => {
                 <CarThumb image={Frame225} text="3.5 L" />
               </div>
               {/* Right: Car Info & Booking */}
-              <div className="w-full flex flex-col gap-6">
+              <div className=" flex flex-col gap-6">
                 <CarDetailsTabs />
               </div>
             </div>
             {/* Sidebar */}
-            <div className="sm:col-span-12 lg:col-span-2 flex justify-center lg:justify-end w-[25%]">
+            <div className=" lg:w-[25%] mt-8 lg:mt-0">
               <RentSidebar />
             </div>
           </div>
-        </main>
-
+        </div>
         {/* You May Also Like These */}
         <section className="max-w-6xl mx-auto mt-10">
           <h2 className="text-xl font-bold mb-6">You May Also Like These</h2>
-          <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {Array.from({ length: 4 }).map((_, idx) => (
               <CarDetailsCard
                 key={idx}
@@ -87,8 +86,6 @@ const Car: React.FC = () => {
           </div>
         </section>
       </main>
-      {/* Main Content */}
-
       <Footer />
     </div>
   );
